@@ -10,4 +10,4 @@
 ## Flutter
 
 1. How to capitalize text in Flutter ?
-  - `.toLowerCase()`
+  - `.toUpperCase()`
