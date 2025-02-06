@@ -35,3 +35,23 @@
       throw Exception('Failed to withdraw crypto');
     }
 ```
+
+4. When need to show `double` in the given number of decimal places. We can use `toStringAsFixed`
+
+```dart
+  1.toStringAsFixed(3);  // 1.000
+  (4321.12345678).toStringAsFixed(3);  // 4321.123
+  (4321.12345678).toStringAsFixed(5);  // 4321.12346
+  123456789012345.toStringAsFixed(3);  // 123456789012345.000
+  10000000000000000.toStringAsFixed(4); // 10000000000000000.0000
+  5.25.toStringAsFixed(0); // 5
+```
+
+5. `popUntil()` equivalent in GoRouter. For this we can use `go` or `goNamed`
+
+```dart
+  GoRouter.of(context).go(
+   Routes.user,
+   extra: "1234",
+  );
+```
