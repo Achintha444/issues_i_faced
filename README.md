@@ -55,3 +55,18 @@
    extra: "1234",
   );
 ```
+
+6. How do I add a bullet or create a bulleted list in flutter ?
+
+```dart
+Text('\u2022 Bullet Text')
+```
+
+If you want to convert a list of strings to a bulleted list.
+
+```dart
+...data.details.benefits.map(
+  (benefit) => Text('\u2022 ${benefit}'),
+  ),
+),
+```
