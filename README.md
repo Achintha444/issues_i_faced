@@ -70,3 +70,22 @@ If you want to convert a list of strings to a bulleted list.
   ),
 ),
 ```
+
+## Tailwind
+
+1. Tailwind CSS responsive breakpoint overrides not working ?
+
+Every time you design something with Tailwind, start from mobile.
+
+```
+<div class="text-center sm:text-left">
+  Lorem ipsum dolor sit amet.
+</div>
+```
+  So basically on this example. Instead of saying:
+
+    Text should be centered only on smaller devices.
+
+  Do this:
+
+    Text should be always centered, and aligned left for bigger devices
