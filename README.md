@@ -89,3 +89,13 @@ Every time you design something with Tailwind, start from mobile.
   Do this:
 
     Text should be always centered, and aligned left for bigger devices
+
+2. Tailwind breakpoints
+
+```
+sm	40rem (640px)	@media (width >= 40rem) { ... }
+md	48rem (768px)	@media (width >= 48rem) { ... }
+lg	64rem (1024px)	@media (width >= 64rem) { ... }
+xl	80rem (1280px)	@media (width >= 80rem) { ... }
+2xl	96rem (1536px)	@media (width >= 96rem) { ... }
+```
