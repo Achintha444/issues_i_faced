@@ -71,6 +71,40 @@ If you want to convert a list of strings to a bulleted list.
 ),
 ```
 
+7. How to align `WidgetSpan` to the `TextSpan` according to the letters ?
+```dart
+    TextSpan(
+        text: sprintf(
+          AppLocalizations.of(context)!.switchAuthTypesText1,
+          [currentAuthType.value],
+        ),
+        style: AppTextStylePrimary.body1r.textPrimary,
+        children: [
+          WidgetSpan(
+            alignment: PlaceholderAlignment.baseline,
+            baseline: TextBaseline.alphabetic,
+            child: InkWell(
+              onTap: () => {
+                context.read<SendConfirmationVerifyOtpBloc>().add(
+                      SendConfirmationVerifyOtpSwitchAuthType(
+                        authType: nextAuthType,
+                      ),
+                    ),
+              },
+              child: Text(
+                nextAuthType.value,
+                style: AppTextStylePrimary.link1r.textLink,
+              ).paddingOnly(top: 2),
+            ),
+          ),
+          TextSpan(
+            text: AppLocalizations.of(context)!.switchAuthTypesText2,
+          ),
+        ],
+      ),
+```
+using `PlaceholderAlignment.baseline` and `TextBaseline.alphabetic`.
+
 ## Tailwind
 
 1. Tailwind CSS responsive breakpoint overrides not working ?
